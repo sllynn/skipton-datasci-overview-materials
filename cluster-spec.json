@@ -1,0 +1,31 @@
+{
+    "num_workers": 4,
+    "cluster_name": "datasci-overview",
+    "spark_version": "6.5.x-cpu-ml-scala2.11",
+  "aws_attributes": {
+    "zone_id": "us-west-2c",
+    "first_on_demand": 1,
+    "availability": "SPOT_WITH_FALLBACK",
+    "instance_profile_arn": "arn:aws:iam::997819012307:instance-profile/shard-demo-s3-access",
+    "spot_bid_price_percent": 100,
+    "ebs_volume_count": 0
+  },
+    "spark_conf": {
+        "spark.databricks.delta.preview.enabled": "true",
+        "spark.databricks.repl.allowedLanguages": "python,sql,scala",
+        "spark.databricks.cluster.profile": "serverless"
+    },
+  "node_type_id": "i3.2xlarge",
+  "driver_node_type_id": "i3.4xlarge",
+    "ssh_public_keys": [],
+    "custom_tags": {
+        "ResourceClass": "Serverless"
+    },
+    "spark_env_vars": {
+        "PYSPARK_PIN_THREAD": "true"
+    },
+    "autotermination_minutes": 120,
+    "enable_elastic_disk": true,
+    "cluster_source": "UI",
+    "init_scripts": []
+}
